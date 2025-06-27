@@ -1,0 +1,113 @@
+.uploader-container {
+  width: 100%;
+  margin-bottom: var(--space-3);
+}
+
+.dropzone {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  background-color: var(--color-bg-secondary);
+  cursor: pointer;
+  transition: all var(--transition-normal) ease;
+}
+
+.dropzone:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(0, 113, 227, 0.05);
+}
+
+.dropzone.active {
+  border-color: var(--color-primary);
+  background-color: rgba(0, 113, 227, 0.1);
+}
+
+.dropzone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.upload-icon {
+  margin-bottom: var(--space-2);
+  color: var(--color-primary);
+}
+
+.upload-title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-1);
+  color: var(--color-text-primary);
+}
+
+.upload-subtitle {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-secondary);
+}
+
+.upload-formats {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+}
+
+.file-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.file-icon {
+  color: var(--color-primary);
+}
+
+.file-name {
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+  word-break: break-all;
+}
+
+.file-size {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+}
+
+.remove-file {
+  background: none;
+  border: none;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  transition: color var(--transition-fast) ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.remove-file:hover {
+  color: var(--color-error);
+  background-color: rgba(255, 59, 48, 0.1);
+}
+
+@media (max-width: 640px) {
+  .dropzone {
+    padding: var(--space-3);
+  }
+  
+  .upload-title {
+    font-size: var(--text-lg);
+  }
+}

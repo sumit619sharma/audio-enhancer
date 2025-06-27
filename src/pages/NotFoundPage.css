@@ -1,0 +1,48 @@
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: var(--space-3);
+  text-align: center;
+}
+
+.not-found-content {
+  max-width: 500px;
+}
+
+.not-found-title {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  margin: 0;
+}
+
+.not-found-subtitle {
+  font-size: var(--text-3xl);
+  margin: var(--space-2) 0;
+}
+
+.not-found-message {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.not-found-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: background-color var(--transition-normal) ease;
+}
+
+.not-found-button:hover {
+  background-color: var(--color-primary-dark);
+  color: white;
+}

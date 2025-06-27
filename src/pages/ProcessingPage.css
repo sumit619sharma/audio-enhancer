@@ -1,0 +1,215 @@
+.processing-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-4);
+  min-height: 100vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  padding: var(--space-6) 0;
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  background: linear-gradient(135deg, var(--color-primary), #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+
+.page-description {
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: var(--space-2) auto 0;
+  font-size: var(--text-lg);
+  line-height: 1.6;
+}
+
+.content-sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.step-section {
+  padding: var(--space-5);
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all var(--transition-normal) ease;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), #7c3aed);
+  opacity: 0;
+  transition: opacity var(--transition-normal) ease;
+}
+
+.step-section:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.step-section:hover::before {
+  opacity: 1;
+}
+
+.step-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--color-primary), #7c3aed);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xl);
+  font-weight: bold;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.step-header h2 {
+  margin: 0;
+  font-size: var(--text-2xl);
+  color: var(--color-text-primary);
+  line-height: 1.3;
+}
+
+.section-description {
+  color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+}
+
+.upload-section {
+  text-align: center;
+  justify-content: center;
+}
+
+.video-section,
+.voice-section,
+.final-video-section {
+  scroll-margin-top: var(--space-6);
+  justify-content: flex-start;
+}
+
+.success-message {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  background: linear-gradient(135deg, rgba(52, 199, 89, 0.1), rgba(124, 58, 237, 0.1));
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  border: 1px solid rgba(52, 199, 89, 0.2);
+}
+
+.btn {
+  margin-top: var(--space-4);
+  height: 56px;
+  min-width: 180px;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, var(--color-primary), #7c3aed);
+  transition: transform var(--transition-normal) ease, box-shadow var(--transition-normal) ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-disabled:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.download-link {
+  font-size: 56px;
+  color: #4106f0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.download-link:hover {
+  color: #007bff; /* Hover color */
+}
+
+
+@media (max-width: 768px) {
+  .processing-page {
+    padding: var(--space-3);
+  }
+  
+  .page-header {
+    margin-bottom: var(--space-4);
+    padding: var(--space-4) 0;
+  }
+  
+  .content-sections {
+    gap: var(--space-4);
+  }
+  
+  .step-section {
+    padding: var(--space-3);
+    min-height: auto;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-lg);
+  }
+  
+  .step-header h2 {
+    font-size: var(--text-xl);
+  }
+  
+  .section-description {
+    font-size: var(--text-base);
+  }
+  
+  .btn {
+    height: 48px;
+    min-width: 160px;
+    font-size: var(--text-base);
+  }
+}
