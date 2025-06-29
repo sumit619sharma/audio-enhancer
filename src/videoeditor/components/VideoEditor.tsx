@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Upload, Download } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Slider } from '@/components/ui/slider';
-import { Card } from '@/components/ui/card';
+import { Button } from '../../components/ui/button';
+import { Slider } from '../../components/ui/slider';
+import { Card } from '../../components/ui/card';
 import ZoomControls from './ZoomControls';
 import Timeline from './Timeline';
 

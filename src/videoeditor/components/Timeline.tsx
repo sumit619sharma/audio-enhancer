@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
-import { Slider } from '@/components/ui/slider';
-import { Button } from '@/components/ui/button';
+import { Slider } from '../../components/ui/slider';
+import { Button } from '../../components/ui/button';
 import { Scissors, Copy, Trash, SkipBack, SkipForward } from 'lucide-react';
 
 interface ZoomEffect {

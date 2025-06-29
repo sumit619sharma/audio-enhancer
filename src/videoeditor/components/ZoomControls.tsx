@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ZoomIn, ZoomOut, Plus, Trash2, RotateCcw } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Slider } from '@/components/ui/slider';
-import { Card } from '@/components/ui/card';
+import { Button } from '../../components/ui/button';
+import { Slider } from '../../components/ui/slider';
+import { Card } from '../../components/ui/card';
 
 interface ZoomEffect {
   id: string;
