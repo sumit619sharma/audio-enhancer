@@ -1,4 +1,4 @@
-import VideoEditor from '@/videoeditor/components/VideoEditor'
+import VideoEditor from '../videoeditor/components/VideoEditor'
 
 const VideoEditorPage = () => {
   return <VideoEditor />
